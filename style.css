@@ -3,7 +3,7 @@
 }
 
 body {
-    background-color: lightblue;
+    background: linear-gradient(135deg, #dbeafe 0%, #e0f2fe 45%, #f8fafc 100%);
     margin: 0;
     display: flex;
     justify-content: center;
@@ -22,9 +22,99 @@ div {
     color: #fff;
 }
 
-li {
-    list-style: none;
+.nav-bar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
+
+.nav-bar li {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 24px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.nav-bar {
+    background: linear-gradient(180deg ,#694A47, black); 
+    width: 15%;
+    padding: 28px 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    border-right: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: inset -1px 0 0 rgba(255, 255, 255, 0.04);
+    font-size: 2.1rem;
+}
+
+.nav-bar h1,
+.nav-bar h2 {
+    margin: 0;
+    color: #f8fafc;
+}
+
+.nav-bar h1 {
+    margin-top: 65px;
+    margin-bottom: 100px;
+    font-size: 4rem;
+    line-height: 1.1;
+    letter-spacing: 0.04em;
+}
+
+.nav-bar h2 {
+    margin-top: 10px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: #fff0de;
+}
+
+.nav-bar a,
+.nav-bar ul,
+.nav-bar li {
+    color: #96c1c5;
+}
+
+.nav-bar ul ul {
+    display: block;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    padding: 14px 16px;
+    color: #96c1c5;
+    backdrop-filter: blur(10px);
+    transition: transform 160ms ease, background-color 160ms ease, border-color 160ms ease;
+}
+
+.nav-bar a {
+    display: inline-block;
+}
+
+.nav-bar a:hover {
+    background: rgba(10, 115, 150, 0.12);
+    border-color: rgba(255, 255, 255, 0.18);
+    transform:translateX(15px);
+    transition: all ease 0.3s;
+}
+
+.nav-bar ul ul a {
+    display: block;
+    width: 100%;
+    color: inherit;
+    font-weight: 600;
+}
+
+.nav-bar img {
+    width: 1vw;
+    margin-right: 10px;
+}
+
 .full-container {
     color: #222;
     display: flex;
@@ -34,11 +124,6 @@ li {
     padding: 10px;
     border-radius: 50px;
     overflow: hidden;
-}
-
-.nav-bar {
-    background-color: #f59e0b;
-    width: 15%;
 }
 
 .main-container {
