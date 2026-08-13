@@ -1,26 +1,50 @@
+/* COLOURS */
+
+:root {
+    --page-bg-start: #f4ecff;
+    --page-bg-end: #e6f5ff;
+    --shell-bg: rgba(255, 255, 255, 0.58);
+    --sidebar-start: #201d2d;
+    --sidebar-end: #332b4f;
+    --sidebar-accent: #d9c7ff;
+    --sidebar-text: #f5f1ff;
+    --sidebar-muted: #c1b8dc;
+    --main-bg: #f7f6fb;
+    --main-text: #1d2433;
+    --panel-lavender: linear-gradient(135deg, #cdbafc 0%, #b7d6ff 100%);
+    --panel-sky: linear-gradient(135deg, #bfe8ff 0%, #dfefff 100%);
+    --panel-peach: linear-gradient(135deg, #ffd8c7 0%, #f9d9ff 100%);
+    --panel-mint: linear-gradient(135deg, #d7f8ec 0%, #dfeeff 100%);
+    --panel-gold: linear-gradient(135deg, #ffe7b6 0%, #f7d7ff 100%);
+}
+
 * {
     box-sizing: border-box;
 }
 
 body {
-    background: linear-gradient(135deg, #dbeafe 0%, #e0f2fe 45%, #f8fafc 100%);
+    background: linear-gradient(135deg, var(--page-bg-start) 0%, var(--page-bg-end) 45%, #f8fafc 100%);
     margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     overflow: hidden;
+    color: var(--main-text);
 }
 
 h1 {
     margin: 40px 10px 30px 60px;
+    color: var(--main-text);
 }
 
 div {
     padding: 16px;
     border-radius: 6px;
-    color: #fff;
+    color: var(--main-text);
 }
+
+/* NAVIGATION BAR */
 
 .nav-bar ul {
     list-style-type: none;
@@ -41,7 +65,7 @@ a {
 }
 
 .nav-bar {
-    background: linear-gradient(180deg ,#694A47, black); 
+    background: linear-gradient(180deg, var(--sidebar-start), var(--sidebar-end));
     width: 15%;
     padding: 28px 28px;
     display: flex;
@@ -55,7 +79,7 @@ a {
 .nav-bar h1,
 .nav-bar h2 {
     margin: 0;
-    color: #f8fafc;
+    color: var(--sidebar-text);
 }
 
 .nav-bar h1 {
@@ -71,23 +95,23 @@ a {
     font-size: 1rem;
     text-transform: uppercase;
     letter-spacing: 0.18em;
-    color: #fff0de;
+    color: var(--sidebar-accent);
 }
 
 .nav-bar a,
 .nav-bar ul,
 .nav-bar li {
-    color: #96c1c5;
+    color: var(--sidebar-muted);
 }
 
 .nav-bar ul ul {
     display: block;
     width: 100%;
     background: rgba(255, 255, 255, 0.06);
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 16px;
     padding: 14px 16px;
-    color: #96c1c5;
+    color: var(--sidebar-muted);
     backdrop-filter: blur(10px);
     transition: transform 160ms ease, background-color 160ms ease, border-color 160ms ease;
 }
@@ -97,9 +121,9 @@ a {
 }
 
 .nav-bar a:hover {
-    background: rgba(10, 115, 150, 0.12);
+    background: rgba(217, 199, 255, 0.12);
     border-color: rgba(255, 255, 255, 0.18);
-    transform:translateX(15px);
+    transform: translateX(12px);
     transition: all ease 0.3s;
 }
 
@@ -113,10 +137,12 @@ a {
 .nav-bar img {
     width: 1vw;
     margin-right: 10px;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
 .full-container {
-    color: #222;
+    color: var(--main-text);
     display: flex;
     align-items: stretch;
     width: 2500px;
@@ -124,10 +150,13 @@ a {
     padding: 10px;
     border-radius: 50px;
     overflow: hidden;
+    background: var(--shell-bg);
+    box-shadow: 0 25px 60px rgba(67, 58, 92, 0.12);
+    border: 1px solid rgba(136, 124, 182, 0.15);
 }
 
 .main-container {
-    background-color: #4ecdc4;
+    background: linear-gradient(180deg, var(--main-bg) 0%, #f1f2ff 100%);
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -155,23 +184,28 @@ a {
     display: flex;
     margin-right: auto;
     margin-left: auto;
-    background-color: #a78bfa;
+    background: var(--panel-lavender);
     height: 30vh;
     width: 95%;
     border-radius: 40px;
     margin-bottom: 30px;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.35);
 }
 
 .project-progress {
     display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
     margin-right: auto;
     margin-left: auto;
     margin-bottom: 30px;
-    background-color: #ff6b6b;
+    background: var(--panel-sky);
     height: 45vh;
     width: 95%;
     min-height: 0;
     border-radius: 40px;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.35);
 }
 
 .activity-bar {
@@ -188,18 +222,62 @@ a {
     display: flex;
     margin-right: 70px;
     margin-left: auto;
-    background-color: #a4f7ff;
+    background: var(--panel-peach);
     width: 25%;
     min-height: 0;
     border-radius: 40px;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.35);
 }
 
 .productivity {
     display: flex;
     margin-right: auto;
     margin-left: auto;
-    background-color: #e5b1ff;
+    background: var(--panel-mint);
     width: 95%;
     min-height: 0;
     border-radius: 40px;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.35);
+}
+
+/*PROJECTS*/
+
+.projects {
+    background-color: #dfefff;
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
+.projects-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin: 0 auto;
+    background-color: #c1b8dc;
+    width: 100%;
+    padding: 20px;
+}
+
+.project {
+    width: 180px;
+    height: 120px;
+    background: rgba(255, 255, 255, 0.35);
+    border-radius: 20px;
+}
+
+/*CALENDAR*/
+
+.calendar {
+    background-color: #b7d6ff;
+    width: 45%;
+    min-height: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 25px;
 }
