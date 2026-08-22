@@ -1,273 +1,231 @@
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet" />
     <title>Projects | Enchante</title>
-  </head>
-  <body>
+</head>
+
+<body>
     <div class="full-container">
-      <div class="nav-bar">
-        <div class="logo">
-          <h1>Enchante</h1>
+        <div class="nav-bar">
+            <div class="logo">
+                <h1>Enchante</h1>
+            </div>
+
+            <div class="main-navbar">
+                <h2>Main</h2>
+                <ul class="side-links">
+                    <li>
+                        <a href="index.html"><span>◌</span> Dashboard</a>
+                    </li>
+                    <li class="active">
+                        <a href="projects.html"><span>▦</span> Projects</a>
+                    </li>
+                    <li>
+                        <a href="#"><span>✓</span> Tasks</a>
+                    </li>
+                    <li>
+                        <a href="#"><span>◷</span> Calendar</a>
+                    </li>
+                </ul>
+                <h2>Dashboard</h2>
+                <ul class="side-links">
+                    <li><a href="#">Workspace</a></li>
+                    <li><a href="#">Starred</a></li>
+                </ul>
+            </div>
+            <div class="sidebar-note">
+                <span class="note-mark">✦</span><strong>Keep the momentum</strong><small>Three deadlines are coming up
+                    this week.</small>
+            </div>
         </div>
 
-        <div class="main-navbar">
-          <h2>Main</h2>
-          <ul class="side-links">
-            <li>
-              <a href="index.html"><span>◌</span> Dashboard</a>
-            </li>
-            <li class="active">
-              <a href="projects.html"><span>▦</span> Projects</a>
-            </li>
-            <li>
-              <a href="#"><span>✓</span> Tasks</a>
-            </li>
-            <li>
-              <a href="#"><span>◷</span> Calendar</a>
-            </li>
-          </ul>
-          <h2>Dashboard</h2>
-          <ul class="side-links">
-            <li><a href="#">Workspace</a></li>
-            <li><a href="#">Starred</a></li>
-          </ul>
-        </div>
-        <div class="sidebar-note">
-          <span class="note-mark">✦</span><strong>Keep the momentum</strong
-          ><small>Three deadlines are coming up this week.</small>
-        </div>
-      </div>
-
-      <main class="main-container projects-page">
-        <header class="projects-header">
-          <div>
-            <p class="eyebrow">Workspace / Overview</p>
-            <h1>Projects</h1>
-            <p class="header-copy">
-              A calm place to see what is moving, what is next, and what needs
-              your eye.
-            </p>
-          </div>
-          <button class="primary-action" type="button" id="new-project">
-            <span>+</span> New project
-          </button>
-        </header>
-        <section class="project-stats" aria-label="Project summary">
-          <div class="stat-item">
-            <span class="stat-icon teal">↗</span>
-            <div><strong>08</strong><small>Total projects</small></div>
-          </div>
-          <div class="stat-item">
-            <span class="stat-icon peach">◒</span>
-            <div><strong>05</strong><small>In progress</small></div>
-          </div>
-          <div class="stat-item">
-            <span class="stat-icon cream">✓</span>
-            <div><strong>12</strong><small>Tasks due this week</small></div>
-          </div>
-          <div class="stat-item">
-            <span class="stat-icon brown">⌁</span>
-            <div><strong>74%</strong><small>Average progress</small></div>
-          </div>
-        </section>
-        <div class="project-toolbar">
-          <div class="filter-tabs" role="tablist" aria-label="Filter projects">
-            <button
-              class="filter-tab is-selected"
-              data-filter="all"
-              type="button"
-            >
-              All projects</button
-            ><button class="filter-tab" data-filter="active" type="button">
-              In progress</button
-            ><button class="filter-tab" data-filter="completed" type="button">
-              Completed
-            </button>
-          </div>
-          <label class="search-box"
-            ><span>⌕</span
-            ><input
-              id="project-search"
-              type="search"
-              placeholder="Search projects"
-              aria-label="Search projects"
-          /></label>
-        </div>
-        <div class="projects-layout">
-          <section class="project-grid" id="project-grid" aria-label="Projects">
-            <article
-              class="project-card"
-              data-status="active"
-              data-name="Brand refresh"
-            >
-              <div class="card-image image-brand">
-                <span class="card-tag">Design</span
-                ><button
-                  class="star-button"
-                  type="button"
-                  aria-label="Star Brand refresh"
-                >
-                  ☆
+        <main class="main-container projects-page">
+            <header class="projects-header">
+                <div>
+                    <p class="eyebrow">Workspace / Overview</p>
+                    <h1>Projects</h1>
+                    <p class="header-copy">
+                        A calm place to see what is moving, what is next, and what needs
+                        your eye.
+                    </p>
+                </div>
+                <button class="primary-action" type="button" id="new-project">
+                    <span>+</span> New project
                 </button>
-              </div>
-              <div class="card-content">
-                <div class="card-title-row">
-                  <h2>Brand refresh</h2>
-                  <span class="health-dot healthy">Healthy</span>
+            </header>
+            <section class="project-stats" aria-label="Project summary">
+                <div class="stat-item">
+                    <span class="stat-icon teal">↗</span>
+                    <div><strong>08</strong><small>Total projects</small></div>
                 </div>
-                <p>Give the studio a sharper, warmer voice.</p>
-                <div class="progress-meta">
-                  <span>Progress</span><strong>82%</strong>
+                <div class="stat-item">
+                    <span class="stat-icon peach">◒</span>
+                    <div><strong>05</strong><small>In progress</small></div>
                 </div>
-                <div class="progress-track">
-                  <span style="width: 82%"></span>
+                <div class="stat-item">
+                    <span class="stat-icon cream">✓</span>
+                    <div><strong>12</strong><small>Tasks due this week</small></div>
                 </div>
-                <div class="card-footer">
-                  <span>6 tasks left</span><span>Due Aug 28</span>
+                <div class="stat-item">
+                    <span class="stat-icon brown">⌁</span>
+                    <div><strong>74%</strong><small>Average progress</small></div>
                 </div>
-              </div>
-            </article>
-            <article
-              class="project-card"
-              data-status="active"
-              data-name="Summer campaign"
-            >
-              <div class="card-image image-summer">
-                <span class="card-tag">Marketing</span
-                ><button
-                  class="star-button"
-                  type="button"
-                  aria-label="Star Summer campaign"
-                >
-                  ☆
-                </button>
-              </div>
-              <div class="card-content">
-                <div class="card-title-row">
-                  <h2>Summer campaign</h2>
-                  <span class="health-dot at-risk">At risk</span>
+            </section>
+            <div class="project-toolbar">
+                <div class="filter-tabs" role="tablist" aria-label="Filter projects">
+                    <button class="filter-tab is-selected" data-filter="all" type="button">
+                        All projects</button><button class="filter-tab" data-filter="active" type="button">
+                        In progress</button><button class="filter-tab" data-filter="completed" type="button">
+                        Completed
+                    </button>
                 </div>
-                <p>Launch the season with a little more colour.</p>
-                <div class="progress-meta">
-                  <span>Progress</span><strong>46%</strong>
-                </div>
-                <div class="progress-track">
-                  <span style="width: 46%"></span>
-                </div>
-                <div class="card-footer">
-                  <span>14 tasks left</span><span>Due Sep 03</span>
-                </div>
-              </div>
-            </article>
-            <article
-              class="project-card"
-              data-status="completed"
-              data-name="Team offsite"
-            >
-              <div class="card-image image-offsite">
-                <span class="card-tag">Personal Project</span
-                ><button
-                  class="star-button"
-                  type="button"
-                  aria-label="Star Team offsite"
-                >
-                  ☆
-                </button>
-              </div>
-              <div class="card-content">
-                <div class="card-title-row">
-                  <h2>Algorithm Visualiser</h2>
-                  <span class="health-dot complete">Complete</span>
-                </div>
-                <p>A thoughtful day away from the usual desk.</p>
-                <div class="progress-meta">
-                  <span>Progress</span><strong>100%</strong>
-                </div>
-                <div class="progress-track">
-                  <span style="width: 100%"></span>
-                </div>
-                <div class="card-footer">
-                  <span>All tasks done</span><span>Finished Aug 12</span>
-                </div>
-              </div>
-            </article>
-            <article
-              class="project-card"
-              data-status="active"
-              data-name="Website launch"
-            >
-              <div class="card-image image-web">
-                <span class="card-tag">Product</span
-                ><button
-                  class="star-button"
-                  type="button"
-                  aria-label="Star Website launch"
-                >
-                  ☆
-                </button>
-              </div>
-              <div class="card-content">
-                <div class="card-title-row">
-                  <h2>Website launch</h2>
-                  <span class="health-dot healthy">Healthy</span>
-                </div>
-                <p>Make the new home for Enchante feel alive.</p>
-                <div class="progress-meta">
-                  <span>Progress</span><strong>68%</strong>
-                </div>
-                <div class="progress-track">
-                  <span style="width: 68%"></span>
-                </div>
-                <div class="card-footer">
-                  <span>9 tasks left</span><span>Due Sep 14</span>
-                </div>
-              </div>
-            </article>
-          </section>
-          <aside class="deadline-panel">
-            <div class="deadline-heading">
-              <div>
-                <p class="eyebrow">Coming up</p>
-                <h2>Next deadlines</h2>
-              </div>
-              <span class="calendar-mark">◷</span>
+                <label class="search-box"><span>⌕</span><input id="project-search" type="search"
+                        placeholder="Search projects" aria-label="Search projects" /></label>
             </div>
-            <div class="deadline-item">
-              <time>28 <small>Aug</small></time>
-              <div>
-                <strong>Brand refresh</strong>
-                <span>Final moodboard review</span>
-              </div>
+            <div class="projects-layout">
+                <section class="project-grid" id="project-grid" aria-label="Projects">
+                    <article class="project-card" data-status="active" data-name="Brand refresh">
+                        <div class="card-image image-brand">
+                            <span class="card-tag">Design</span><button class="star-button" type="button"
+                                aria-label="Star Brand refresh">
+                                ☆
+                            </button>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-title-row">
+                                <h2>Brand refresh</h2>
+                                <span class="health-dot healthy">Healthy</span>
+                            </div>
+                            <p>Give the studio a sharper, warmer voice.</p>
+                            <div class="progress-meta">
+                                <span>Progress</span><strong>82%</strong>
+                            </div>
+                            <div class="progress-track">
+                                <span style="width: 82%"></span>
+                            </div>
+                            <div class="card-footer">
+                                <span>6 tasks left</span><span>Due Aug 28</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="project-card" data-status="active" data-name="Summer campaign">
+                        <div class="card-image image-summer">
+                            <span class="card-tag">Marketing</span><button class="star-button" type="button"
+                                aria-label="Star Summer campaign">
+                                ☆
+                            </button>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-title-row">
+                                <h2>Summer campaign</h2>
+                                <span class="health-dot at-risk">At risk</span>
+                            </div>
+                            <p>Launch the season with a little more colour.</p>
+                            <div class="progress-meta">
+                                <span>Progress</span><strong>46%</strong>
+                            </div>
+                            <div class="progress-track">
+                                <span style="width: 46%"></span>
+                            </div>
+                            <div class="card-footer">
+                                <span>14 tasks left</span><span>Due Sep 03</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="project-card" data-status="completed" data-name="Team offsite">
+                        <div class="card-image image-offsite">
+                            <span class="card-tag">Personal Project</span><button class="star-button" type="button"
+                                aria-label="Star Team offsite">
+                                ☆
+                            </button>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-title-row">
+                                <h2>Algorithm Visualiser</h2>
+                                <span class="health-dot complete">Complete</span>
+                            </div>
+                            <p>A thoughtful day away from the usual desk.</p>
+                            <div class="progress-meta">
+                                <span>Progress</span><strong>100%</strong>
+                            </div>
+                            <div class="progress-track">
+                                <span style="width: 100%"></span>
+                            </div>
+                            <div class="card-footer">
+                                <span>All tasks done</span><span>Finished Aug 12</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="project-card" data-status="active" data-name="Website launch">
+                        <div class="card-image image-web">
+                            <span class="card-tag">Product</span><button class="star-button" type="button"
+                                aria-label="Star Website launch">
+                                ☆
+                            </button>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-title-row">
+                                <h2>Website launch</h2>
+                                <span class="health-dot healthy">Healthy</span>
+                            </div>
+                            <p>Make the new home for Enchante feel alive.</p>
+                            <div class="progress-meta">
+                                <span>Progress</span><strong>68%</strong>
+                            </div>
+                            <div class="progress-track">
+                                <span style="width: 68%"></span>
+                            </div>
+                            <div class="card-footer">
+                                <span>9 tasks left</span><span>Due Sep 14</span>
+                            </div>
+                        </div>
+                    </article>
+                </section>
+                <aside class="deadline-panel">
+                    <div class="deadline-heading">
+                        <div>
+                            <p class="eyebrow">Coming up</p>
+                            <h2>Next deadlines</h2>
+                        </div>
+                        <span class="calendar-mark">◷</span>
+                    </div>
+                    <div class="deadline-item">
+                        <time>28 <small>Aug</small></time>
+                        <div>
+                            <strong>Brand refresh</strong>
+                            <span>Final moodboard review</span>
+                        </div>
+                    </div>
+                    <div class="deadline-item">
+                        <time>30 <small>Aug</small></time>
+                        <div>
+                            <strong>Summer campaign</strong>
+                            <span>Copy handoff</span>
+                        </div>
+                    </div>
+                    <div class="deadline-item">
+                        <time>03 <small>Sep</small></time>
+                        <div>
+                            <strong>Website launch</strong>
+                            <span>QA sign-off</span>
+                        </div>
+                    </div>
+                    <a class="calendar-link" href="#">Open calendar <span>→</span></a>
+                </aside>
             </div>
-            <div class="deadline-item">
-              <time>30 <small>Aug</small></time>
-              <div>
-                <strong>Summer campaign</strong>
-                <span>Copy handoff</span>
-              </div>
-            </div>
-            <div class="deadline-item">
-              <time>03 <small>Sep</small></time>
-              <div>
-                <strong>Website launch</strong>
-                <span>QA sign-off</span>
-              </div>
-            </div>
-            <a class="calendar-link" href="#">Open calendar <span>→</span></a>
-          </aside>
-        </div>
-      </main>
+        </main>
     </div>
     <script src="js/page-transition.js"></script>
     <script src="js/projects.js"></script>
-  </body>
+</body>
+
 </html>

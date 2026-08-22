@@ -13,6 +13,28 @@ function updateProjectList() {
     });
 }
 
+projectCards.forEach((card) => {
+    card.addEventListener("click", (event) => {
+        if (event.target.closest("button")) {
+            return;
+        }
+
+        document.body.classList.add("is-leaving");
+        window.setTimeout(() => {
+            window.location.href = "project.html";
+        }, 220);
+    });
+
+    card.setAttribute("tabindex", "0");
+    card.setAttribute("role", "link");
+    card.addEventListener("keydown", (event) => {
+        if (event.key === "Enter" || event.key === " ") {
+            event.preventDefault();
+            card.click();
+        }
+    });
+});
+
 filterTabs.forEach((tab) => {
     tab.addEventListener("click", () => {
         filterTabs.forEach((item) => item.classList.remove("is-selected"));
